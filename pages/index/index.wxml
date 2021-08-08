@@ -1,0 +1,48 @@
+<view class="content">
+  <scroll-view scroll-y="true" style="height: 1334rpx;" 
+    bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+    <!-- 模板生成弹框 -->
+    <view class="canvas-content">
+      <view class="con">
+        <canvas canvas-id='myCanvas' class='canvas'></canvas>
+        <view class="info">
+          <!-- 行业 -->
+          <view class="show-post-text">{{upost}}</view>
+          <!-- 姓名 -->
+          <view class="show-name-text">{{uname}}</view>
+          <!-- 联系电话 -->
+          <view class="show-company-text">{{ucompany}}</view>
+        </view>
+      </view>
+      <view class="canvas-bottom" hidden="{{isHidde}}">
+        <view class="btn-save" bindtap="saveImg">保存</view>
+        <view class="btn-close" bindtap="closeDialog">取消</view>
+      </view>
+    </view>
+
+    <!-- 编辑区域 -->
+    <view class="edit-tips">编辑：</view>
+    <view class="form-container">
+      <view class="show-name item">
+        <label class="name-label">姓名:</label>
+        <input type="text" v-model="name" placeholder="" bindinput="onchangeName" class="input" />
+      </view>
+      <view class="line"></view>
+      <view class="show-company item">
+        <label class="company-name-label">联系电话:</label>
+        <input type="text" v-model="company" placeholder="" bindinput="onchangeCompany" class="input" />
+      </view>
+      <view class="line"></view>
+      <view class="show-post item">
+        <label class="name-post-label">从业行业:</label>
+        <input type="text" v-model="post" placeholder="" bindinput="onchangePost" class="input" />
+      </view>
+    </view>
+
+    <view class="create-btn">
+      <button bindtap="createImg" hidden="{{hiddeButton}}" class="btn">确定生成</button>
+    </view>
+  </scroll-view>
+  
+</view>
