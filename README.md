@@ -14,3 +14,5 @@
 
 下面是保存的图片效果：
 ![hmNsT33XU7IN17c4f9fd3ca775bc01f14f8f37c90e25](https://user-images.githubusercontent.com/65069676/128631829-16e4838a-b8c7-48ab-82f9-bf8de2ccf029.png)
+
+注意：设置不校验合法域名
